@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>18</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>0</x>
+      <y>576</y>
+      <w>108</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Player</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>324</x>
+      <y>540</y>
+      <w>216</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Log in</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>324</x>
+      <y>720</y>
+      <w>216</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Sign in</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>540</y>
+      <w>288</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>558</y>
+      <w>270</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;50.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>666</y>
+      <w>270</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;130.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>774</x>
+      <y>540</y>
+      <w>270</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>forgot password</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>180</x>
+      <y>378</y>
+      <w>936</w>
+      <h>576</h>
+    </coordinates>
+    <panel_attributes>Menu Connexion
+halign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>594</y>
+      <w>180</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>810</x>
+      <y>738</y>
+      <w>216</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>reset password</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

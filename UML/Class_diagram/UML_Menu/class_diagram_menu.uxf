@@ -1,0 +1,2972 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1302</x>
+      <y>576</y>
+      <w>168</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/BaseMenuNcurses/*
+bg=blue
+--
+# _window: MenuMaker*
+# _choice: size_t
+# _stars: size_t
+--
++ display(): void &lt;&lt;override&gt;&gt;
++ initAll(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ quitMenu(): void
++ decorate(): void
++ animation(): void &lt;&lt;override&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1848</x>
+      <y>534</y>
+      <w>168</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/MenuInfo /*
+--
+_# _client: GameClient*_
+_# _user_name: char_
+_# _friend_name: char_
+--
+_+ setFriendName(fn: string): void_
+_+ setClient(client: GameClient*): void_
+_+ getUserName(): char_
+_+ getFriendName(): char_
+_+ getClient(): GameClient*_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3030</x>
+      <y>822</y>
+      <w>204</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>*EndMenuSFML*
+--
+- _animation_end: boolean
+- _animation_timer: size_t
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void  &lt;&lt;override&gt;&gt;
++ setButtonLike(already_liked: boolean): void
+- looseAnimation(): void
+- winAnimation(): void
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2622</x>
+      <y>594</y>
+      <w>162</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>*ErrorMenuSFML*
+--
+- _str_error: char[ ]
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2544</x>
+      <y>804</y>
+      <w>252</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>*FriendProfileMenuSFML*
+--
+- _is_friend: FRIEND_STATE
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void &lt;&lt;override&gt;&gt;
++ setFriendInfo(state: FRIEND_STATE,score: int): void &lt;&lt;override&gt;&gt;
+- setPlanet(): void
+- sendFriendRequest(): void &lt;&lt;override&gt;&gt;
+- deleteFriend(): void &lt;&lt;override&gt;&gt;
+- acceptFriendRequest(): void &lt;&lt;override&gt;&gt;
+- rejectFriendRequest(): void &lt;&lt;override&gt;&gt;
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3240</x>
+      <y>852</y>
+      <w>234</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>*LeaderboardMenuSFML*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void
++ setLeaderboard(usernames_list: char, scores_list: int): void
++ setLeaderboardMy(my_score: int): void
+bg=red
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3216</x>
+      <y>498</y>
+      <w>264</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>*LevelFriendMenuSFML *
+--
+- _list_levels: string[ ]
+- _name_levels: string[ ]
+- _view_scroll: View
+- _scrolling: size_t
+- _friend: string
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ animation(): void
++ scrollBtn(scroll: float): void
++ createButtons(): void
++ getLevels(): void
++ setLevelList(levels: char,level_like: int,nb_levels: unsigned): void
+bg=red
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2790</x>
+      <y>594</y>
+      <w>204</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>*MainMenuSFML*
+--
+
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void &lt;&lt;override&gt;&gt;
+bg=red
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2220</x>
+      <y>768</y>
+      <w>318</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>*MyProfileMenuSFML*
+--
+- _scrolling: float
+- _friends_waiting: string[ ]
+- _view_scroll: View
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void
++ scrollBtn(scroll: float): void
++ setUser(score: int,question: char,answer: char,pending_list: char): void &lt;&lt;override&gt;&gt;
+- setPlanet(): void
+- creatTexte(): void
+- createButtons(): void
+- goTo(): MNAME
+- changeInfo(): void
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2802</x>
+      <y>822</y>
+      <w>222</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>*RoomMenuSFML*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(work: boolean): void
++ animation(): void &lt;&lt;override&gt;&gt;
+- startHighlight(): void
+- setSettings(): void
+- newHighlight(first: size_t,last: size_t,who: size_t): void
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1956</x>
+      <y>792</y>
+      <w>258</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>*SocialMenuSFML*
+--
+- _view_scroll: View
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void
++ createButtons(): void
++ setFriendsList(fl: char,count_friends: unsigned): void &lt;&lt;override&gt;&gt;
++ setSearchText(): void &lt;&lt;override&gt;&gt;
+- scrollBtn(croll: float): void
+- searchFriend(): void &lt;&lt;override&gt;&gt;
+- goTo(): MNAME
+bg=red
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3648</x>
+      <y>1104</y>
+      <w>204</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>*LevelChoiceSettingsMenu *
+--
+- _choosen_time: int
+_# _timer_level: int_
+_# _name_level: char_
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void
++ setTextError(): void &lt;&lt;override&gt;&gt;
++ testValues(): boolean
+_+ getTimeLevel(): int_
+_+ setTimeLevel(time: int): void_
+_+ getNameLevel(): auto_
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3648</x>
+      <y>792</y>
+      <w>204</w>
+      <h>294</h>
+    </coordinates>
+    <panel_attributes>*LevelCreateMenu  *
+--
+- _view_scroll: View    
+- _factor_time : int
+- _level_name: char
+- _current_choice_mob: ChoicedMob 
+- _current_scroll_value: float 
+- _texture_mob: Texture*
+- _mobs: Mob_pos[ ]
+- _boss_posed: boolean
+- _mode_erase: boolean 
+- _mouse: Sprite
+- _background_view: Sprite
+- viewport: float
+- _is_kirby_cutting: boolean 
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void
++ setTextError(): void &lt;&lt;override&gt;&gt;
++ testValues(): boolean
++ createSpriteFromChoice(): Mob_pos
++ writeIntoFile(): void
++ collisionResolverEditor(): boolean
++ eraser(): void
++ deleteMob(size_t): void
++ isCurrentlyABoss(): boolean
++ setTextBeginEnd(): void
++ getTypeFromName(name: string): EntityType
++ getPositionsInView(): Vector2f
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3498</x>
+      <y>768</y>
+      <w>96</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*MNAME*
+--
+SWARMLING
+BATTLESHIP
+CRUISER
+ESCORTER
+LASERGUN
+OBSTACLE
+BOSS_POULPE
+BOSS_DRAGON
+BOSS_ENTERPRISE
+BOSS_ASTEROID
+BACKGROUND
+_NUMBER
+        
+        </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3498</x>
+      <y>924</y>
+      <w>96</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*mob_pos*
+--
+sprite: Sprite*
+width: float
+height: float
+name: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3606</x>
+      <y>900</y>
+      <w>54</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt; has</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3000</x>
+      <y>600</y>
+      <w>204</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*LevelMainMenu  *
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3888</x>
+      <y>1314</y>
+      <w>150</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>*ConnectionInfoSFML*
+--
+--
++ testValues(): boolean &lt;&lt;override&gt;&gt;
++ switchField(): void
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3498</x>
+      <y>594</y>
+      <w>204</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>*ConnectionMenuSFML*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ animation(): void &lt;&lt;override&gt;&gt;
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3978</x>
+      <y>1200</y>
+      <w>210</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*LoginMenuSFML*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- login(): void
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3978</x>
+      <y>864</y>
+      <w>210</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*NewPasswordMenuSFML*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- testPassword(): boolean
+- setPassword(): MNAME
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3978</x>
+      <y>948</y>
+      <w>210</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*QuestionVerificationMenuSFML*
+--
+- _question: char[]
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- testQuestion(): MNAME
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3978</x>
+      <y>1032</y>
+      <w>210</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*RegisterMenuSFML*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- createAccount(): void
+bg=RED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3978</x>
+      <y>1116</y>
+      <w>210</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*UserNameVerificationMenuSFML*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- testUser(): MNAME
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1710</x>
+      <y>414</y>
+      <w>126</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/BaseMenu/*
+--
+- _timer: Timer
+--
++ display(): void
++ initAll(): void
++ inputs(): MNAME
++ quitMenu(): void
++ timer(ms: int): void
++ animation(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1380</x>
+      <y>684</y>
+      <w>804</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1320.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1380</x>
+      <y>684</y>
+      <w>18</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2166</x>
+      <y>684</y>
+      <w>18</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1716</x>
+      <y>0</y>
+      <w>300</w>
+      <h>306</h>
+    </coordinates>
+    <panel_attributes>*WindowMenu*
+--
+- _is_graphical: boolean
+- _state: boolean
+- _mn: BaseMenu*
+- _client: GameClient*
+- _menu_type: MNAME
+--
++ init(): void
++ display(): void
++ input(): void
++ getState(): boolean
++ activateMenu(): void
++ getMenuType(): MNAME
++ setRegister(work: boolean): void
++ setLogin(work: boolean): void
++ setLevelChoiceNameMenu(work: boolean): void
++ setLevelCreateMenu(work: boolean): void
++ friendLevelMenuSetup(levels_list: char,levels_like_list: int,
+level_count: unsigned): void
++ secretQuestion(question_str: char): void
++ secretAnswer(work: boolean): void
++ socialMenuSetup(friends_list: char,count_friends: unsigned): void
++ findFriend(is_existing: boolean): void
++ setLeaderBoard(usernames_list: char,scores_list: int): void
++ setMyLeaderBoard(my_score: int): void
++ setProfileUser(score: int,question: char,answer: char,pending_list: char): void
++ setFriendInfo(_state: FRIEND_STATE,score: int): void
++ setEndMenu(end_code: int, score_user: int,score_friend: int): void
++ setMenuError(str_error: char): void
++ setLevelRoomMenu(work: boolean): void
++ setButtonLikeEndMenu(already_liked: boolean): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1770</x>
+      <y>300</y>
+      <w>24</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1770</x>
+      <y>516</y>
+      <w>18</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1518</x>
+      <y>24</y>
+      <w>150</w>
+      <h>222</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*MNAME*
+--
+EXIT_MENU
+GAME
+MAIN_MENU
+ROOM_MENU
+SOCIAL_MENU
+LEADERBOARD_MENU
+MY_PROFILE_MENU
+PROFILE_FRIENDS
+CONNECTION_MENU
+LOGIN_MENU
+REGISTER_MENU
+QUESTION_VERIFICATION_MENU
+USER_NAME_VERIFICATION_MENU
+NEW_PASSWORD_MENU
+LEVEL_MAIN_MENU
+LEVEL_CHOICE_SETTINGS_MENU
+LEVEL_CREATE_MENU
+MY_LEVEL_MENU
+FRIEND_LEVEL_MENU
+NOTHING</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1662</x>
+      <y>126</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt; menus</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1254</x>
+      <y>258</y>
+      <w>300</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>*MenuMaker*
+--
+- _btn: Button[ ]
+- _win: Win[ ]
+- _txt_input: TextInput[ ]
+- _obj: PosObj[ ]
+--
++ createWin(x: int,y: int,w: int,h: int): void
++ createWin(who: size_t,x: int,y: int,w: int,h: int): void
++ createButton(n: string,x: int,y: int,w: int,h: int): void
++ createTxtInput(max: size_t,x: int,y: int,w: int,h: int,is_password: boolean): void
++ createObj(who: size_t,txt: string,pos_x: int,pos_y: int,color: int): void 
++ writeText(who: size_t): KEY
++ getText(who: size_t): char
++ getNbInputText(): size_t
++ getNbButtons(): size_t
++ scrollButtons(min: size_t,max: size_t,direction: boolean): void
++ changeButtons(who: size_t,new_txt: char): void
++ setHiglight(who: size_t,special: boolean): void
++ unsetHiglight(who: size_t,special: boolean): void
++ changeObject(who: size_t,s: string,c: int):void
++ move(who: size_t,x: int,y: int): void
++ getPos(who: size_t,xy: boolean): int
++ getNbObject(): size_t
++ drawButtons(): void 
++ drawTxtInput(): void
++ drawObjects(): void
++ drawBox(who: size_t, color: int): void 
++ updateWin(who: size_t): void 
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1314</x>
+      <y>228</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1380</x>
+      <y>522</y>
+      <w>24</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1194</x>
+      <y>366</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2232</x>
+      <y>432</y>
+      <w>24</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2526</x>
+      <y>462</y>
+      <w>24</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2496</x>
+      <y>396</y>
+      <w>24</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2322</x>
+      <y>588</y>
+      <w>96</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2058</x>
+      <y>108</y>
+      <w>126</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>*TerminalWindow*
+--
+--
+--
+cf. class diagram client server</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2010</x>
+      <y>120</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2052</x>
+      <y>216</y>
+      <w>126</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*GameClient*
+--
+cf. class diagramm client server
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1920</x>
+      <y>270</y>
+      <w>198</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;440.0;10.0;70.0;310.0;70.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>252</y>
+      <w>114</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>*Border*
+bg=blue
+--
+- _rect: Rectangle{}
+- _is_highlight: boolean
+# _w: WINDOW*
+--
++ setHighlight(): void
++ unsetHighlight(): void
++ isHighlight(): bool
++ setX(x: int): void
++ setY(y: int): void
++ getPosX(): int
++ getPosY(): int
++ getWidth(): int
++ getHeight(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>438</y>
+      <w>114</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>*Rectangle*
+bg=blue
+--
+- _pos_x: int
+- _pos_y: int
+- _width: int
+- _height: int
+--
++ setPosX(x: int): void
++ setPosY(y: int): void
++ setWidth(w: int): void
++ setHeight(h: int): void
++ getPosX(): int
++ getPosY(): int
++ getWidth(): int
++ getHeigth(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>978</x>
+      <y>306</y>
+      <w>84</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>192</y>
+      <w>18</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>186</y>
+      <w>42</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>384</y>
+      <w>24</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>978</x>
+      <y>552</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1266</x>
+      <y>144</y>
+      <w>114</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>*Window*
+--
+--
+_+ ncursesInit(): void_
+_+ ncursesStop(): void_
+_+ ncursesColors(): void_
+_+ input(): KEY_
++ update(): void
+_+ clearAll(): void _
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1194</x>
+      <y>180</y>
+      <w>18</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;680.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>576</y>
+      <w>42</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>50.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2160</x>
+      <y>480</y>
+      <w>168</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/BaseMenuSFML/*
+bg=red
+--
+_# _window: RenderWindow*_
+_# _background: Background*_
+_# _stars: Stars*_
+_# _bg_sprites: SpriteSimple*[ ]_
+_# _random_spawn: int_
+_# explosion: size_t_
+# _buttons: Button*[ ]
+# _txt_fields: TexteField*[ ]
+# _textes: Texte*[ ]
+# _sprites: SpriteSimple*[ ]
+--
+# explose(x: float,y: float): void
++ display(): void &lt;&lt;override&gt;&gt;
++ initAll(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ windowInputs(event: Event&amp;): MNAME
++ quitMenu(): void &lt;&lt;override&gt;&gt;
++ animation(): void &lt;&lt;override&gt;&gt;
+_+ setWindow(wd: RenderWindow*): void_
+- generateRandom(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2406</x>
+      <y>480</y>
+      <w>162</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>*Texte  *
+bg=red
+--
+- _txt: string
+- text: Text
+_- font: Font_
+- _is_password: boolean
+--
++ update(): void
++ update(special: char): void
++ draw(window: RenderWindow&amp;): void
++ move(x: float,y: float): void
++ zoom(z: float): void
++ setPosition(x: float,y: float): void
++ setTexte(txt: string): void
++ getTexte(): string
++ getWidth(): float
++ getHeight(): float
+_+ setFont(): void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2016</x>
+      <y>318</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>*Background *
+bg=red
+--
+- back_texture: Texture 
+- back_sprite1: Sprite 
+- back_sprite2: Sprite 
+- bg1_y: float
+- bg2_y: float
+--
++ update(speed: float): void
++ draw(window: RenderWindow&amp;): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2190</x>
+      <y>342</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>*Stars  *
+bg=red
+--
+- _stars: Background*[]
+--
++ update(speed: float): void
++ draw(window: RenderWindow&amp;): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2364</x>
+      <y>234</y>
+      <w>168</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>*Button  *
+bg=red
+--
+- _texture: Texture[ ]
+- _border: Sprite
+- _texte: Texte*
+- _is_on: boolean
+- _is_select: boolean
+- _is_special: boolean
+--
++ update(x: float,y:float): void
++ draw(window: RenderWindow&amp;): void
++ getTxt(): string
++ setTxt(txt: string): void
++ isOn(x: int,y: int): void
++ isClickOn(): boolean
++ isSelect(): boolean
++ unselect(): void
++ select(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2538</x>
+      <y>228</y>
+      <w>168</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>*TexteField   *
+bg=red
+--
+- _border: RectangleShape 
+- _texte: Texte*
+- _is_on: boolean
+- _is_select: boolean
+- _colors: unsigned int[ ]
+- _max_size: size_t
+- _where_txt: size_t
+- _is_password: boolean
+--
++ update(new_char: char): void
++ draw(window: RenderWindow&amp;): void
++ getTexte(): char
++ isOn(x: int,y: int): void
++ isClickOn(): boolean
++ isSelect(): boolean
++ unselect(): void
++ select(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2712</x>
+      <y>234</y>
+      <w>168</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>*SpriteSimple   *
+bg=red
+--
+- _textures: Texture*[ ]
+- _sprite: Sprite
+- _animation: float
+- _max: size_t
+- _one: boolean
+--
++ move(x: float,y: float): void
++ setPosition(x: float,y: float): void
++ setSize(w: float,h: float): void
++ rotate(degre: float); void
++ getRotation(): float
++ setColor(colors: Uint8): void
++ draw(window: RenderWindow&amp;): void
++ animate(advance: float): void
++ setFirstFrame(): void
++ isLastFrame(): boolean
++ isOutScreen(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2088</x>
+      <y>426</y>
+      <w>732</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2802</x>
+      <y>408</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2610</x>
+      <y>396</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2442</x>
+      <y>396</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2262</x>
+      <y>408</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2088</x>
+      <y>408</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2178</x>
+      <y>318</y>
+      <w>84</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>120.0;40.0;120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2556</x>
+      <y>396</y>
+      <w>24</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2496</x>
+      <y>456</y>
+      <w>78</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1038</x>
+      <y>150</y>
+      <w>138</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>*Button*
+bg=blue
+--
+- _name: string
+- _special: bool
+--
++ initButton(): void
++ setSpecial(): void
++ unsetSpecial(): void
++ move(wd: WINDOW*): void
++ changeTxt(new_txt: char): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>252</y>
+      <w>126</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>*TextInput*
+bg=blue
+--
+- _txt: char
+- _txt_pos: size_t
+- _max_lenght: size_t
+- _is_password: boolean
+--
++ initTxtInput(): void
++ textWrite: KEY
+_+ getInput(): KEY_
++ checkChar(ch: int): boolean
++ getTxt(): char</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1074</x>
+      <y>372</y>
+      <w>102</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>*PosObj*
+bg=blue
+--
+- _w: WINDOW*
+- _pos_x: int
+- _pos_y: int
+- _txt: string
+- _color: int
+--
++ drawObject(): void
++ clearObject(): void
++ getPosX(): int
++ getPosY(): int
++ getText(): string
++ setPosX(x: int): void
++ setPosY(y: int): void
++ setColor(c: int): void
++ setText(s: string): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1086</x>
+      <y>540</y>
+      <w>90</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*Win*
+bg=blue
+--
+- _rect: Rectangle
+- _w: WINDOW*
+--
++ getPosX(): int
++ getPosY(): int
++ getWidth(): int
++ getHeight(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>432</y>
+      <w>42</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>50.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>288</y>
+      <w>42</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>50.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1170</x>
+      <y>174</y>
+      <w>42</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>50.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>948</y>
+      <w>126</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*LoginMenuNcurses*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- login(): void
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>1200</y>
+      <w>126</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*NewPasswordMenuNcurses*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- testPassword(): boolean
+- setPassword(): MNAME
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>864</y>
+      <w>150</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*QuestionVerificationMenuNcurses*
+--
+- _question: char[]
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- testQuestion(): MNAME
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>1116</y>
+      <w>120</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*RegisterMenuNcurses*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- createAccount(): void
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>1032</y>
+      <w>150</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>*UserNameVerificationMenuNcurses*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(): void &lt;&lt;override&gt;&gt;
+- testUser(): MNAME
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1590</x>
+      <y>1302</y>
+      <w>78</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*FRIEND_STATE*
+--
+NOT_FRIEND
+FRIEND
+ACCEPT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1620</x>
+      <y>1278</y>
+      <w>42</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-
+has v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>1314</y>
+      <w>150</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>*ConnectionInfoNcurses*
+--
+--
++ testValues(): boolean &lt;&lt;override&gt;&gt;
+bg=blue
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2010</x>
+      <y>240</y>
+      <w>54</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2214</x>
+      <y>1170</y>
+      <w>234</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/LeaderboardMenu/*
+--
+--
+# requestLeaderboard(): void
++ setLeaderboard(usernames_list: char, scores_list: int): void
++ setLeaderboardMy(my_score: int): void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1152</x>
+      <y>1164</y>
+      <w>210</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/SocialMenu/*
+--
+# _scrolling: size_t
+# _friends_list: string[ ]
+--
++ setFriendsList(fl: char,count_friends: unsigned): void
++ setSearchText(): void
+# requestFriendList(): void
+# searchFriend(): void
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2034</x>
+      <y>1164</y>
+      <w>174</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/EndMenu/*
+--
+- _level_remain: int
+- _score_user: int
+- _score_friend: int
+- _is_like: boolean
+--
+- logoutPlayer2(username: char): void
+- quitSound(): void
++ setButtonLike(already_liked: boolean): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1794</x>
+      <y>1416</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/ConnectionInfo/*
+--
+_+ _is_user: boolean_
+--
++ testValues(): boolean
++ setTextError(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1602</x>
+      <y>1164</y>
+      <w>228</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/FriendProfileMenu/*
+--
+- _is_friend: FRIEND_STATE
+--
++ setFriendInfo(state: FRIEND_STATE,score: int): void
++ setFriendState(state: FRIEND_STATE): void
++ getFriendState(): FRIEND_STATE
+# sendFriendRequest(): void
+# deleteFriend(): void
+# acceptFriendRequest(): void
+# rejectFriendRequest(): void
+# getFriendInfo(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1368</x>
+      <y>1164</y>
+      <w>228</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/MyProfileMenu/*
+--
+# _scrolling: size_t
+# _friends_waiting: string[ ]
+--
++ setUser(score: int,question: char,answer: char,
+pending_list: char): void
+# getUser(): void
+# changeInfo(infos: char): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1326</x>
+      <y>840</y>
+      <w>222</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>*EndMenuNcurses*
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setButtonLike(already_liked: boolean): void &lt;&lt;override&gt;&gt;
+- decorate(): void
+- animation(): void
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>564</x>
+      <y>594</y>
+      <w>222</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>*ErrorMenuNcurses *
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
+- decorate(): void
+- animation(): void
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>894</x>
+      <y>816</y>
+      <w>258</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>*FriendProfileMenuNcurses  *
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setFriendInfo(state: FRIEND_STATE,score: int): void &lt;&lt;override&gt;&gt;
+- animation(): void
+- sendFriendRequest(): void &lt;&lt;override&gt;&gt;
+- deleteFriend(): void &lt;&lt;override&gt;&gt;
+- acceptFriendRequest(): void &lt;&lt;override&gt;&gt;
+- rejectFriendRequest(): void &lt;&lt;override&gt;&gt;
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1554</x>
+      <y>804</y>
+      <w>276</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>*LeaderboardMenuNcurses *
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setLeaderboard(usernames_list: char,scores_list: int): void &lt;&lt;override&gt;&gt;
++ setLeaderboardMy(my_score: int): void &lt;&lt;override&gt;&gt;
+- decorate(): void &lt;&lt;override&gt;&gt;
+- createButton(): void
+- createWin(): void
+- createObjects(): void
+- cleanLeaderboard(): void
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>540</y>
+      <w>276</w>
+      <h>138</h>
+    </coordinates>
+    <panel_attributes>*LevelFriendMenuNcurses  *
+--
+- _scrolling: size_t
+- _list_levels: string[]
+- _names_levels: string [ ]
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ getLevels(): void
++ setLevelList(levels: char,level_like: int,nb_levels: unsigned):void
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
+- createButtons(): void
+- checkArrow(): void
+- decorate(): void &lt;&lt;override&gt;&gt;
+- animation(): void &lt;&lt;override&gt;&gt;
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>426</x>
+      <y>624</y>
+      <w>132</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>*MainMenuNcurses  *
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>816</y>
+      <w>204</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>*MyProfileMenuNcurses   *
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setUser(score: int,question: char,answer: char,
+pending_list: char): void &lt;&lt;override&gt;&gt;
+- goTo(): MNAME
+- createButton(): void
+- checkArrow(): void
+- changeInfo(): void
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>852</x>
+      <y>624</y>
+      <w>138</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*ProfileMenuNcurses   *
+--
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1158</x>
+      <y>792</y>
+      <w>162</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>*RoomMenuNcurses    *
+--
+- _choice_array: boolean[ ]
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setTextError(work: boolean): void
+- createButton(): void
+- createText(): void
+- decorate(): void &lt;&lt;override&gt;&gt;
+- newHighlight(first: int,last: int): void
+- startingHighlight(): void
+- setSettings(): void
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>426</x>
+      <y>792</y>
+      <w>252</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>*SocialMenuNcurses     *
+--
+- _choice_array: boolean[ ]
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
++ setFriendsList(fl: char,count_friends: unsigned): void &lt;&lt;override&gt;&gt;
++ setSearchText(): void &lt;&lt;override&gt;&gt;
+- createButtons(): void
+- checkArrow(): void
+- decorate(): void &lt;&lt;override&gt;&gt;
+- animation(): void &lt;&lt;override&gt;&gt;
+- searchFriend(): void &lt;&lt;override&gt;&gt;
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1878</x>
+      <y>1164</y>
+      <w>150</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/RoomMenu/*
+--
+# _is_solo: GameMode
+# _difficulty: Difficulty 
+# _dropping_rate: DropRate  
+# _friendly_fire: FriendlyFire 
+# _lives: HealthPoints 
+# _level_name: string
+# _level_name_correct: boolean
+_# _name_level: char_
+--
+# start(): void
+# logoutPlayer2(username: char): void
+- setTextError(): void
+_- getLevelPlayed(): char_
+_- setLevelPlayer(level: string): void_
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>594</y>
+      <w>120</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>*ConnectionMenuNcurses*
+--
+- _ship_speed: int
+--
++ initAll(): void &lt;&lt;override&gt;&gt;
++ display(): void &lt;&lt;override&gt;&gt;
++ inputs(): MNAME &lt;&lt;override&gt;&gt;
+- decorate(): void &lt;&lt;override&gt;&gt;
+- animation(): void &lt;&lt;override&gt;&gt;
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1890</x>
+      <y>636</y>
+      <w>18</w>
+      <h>522</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;850.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>1134</y>
+      <w>1092</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1800.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2334</x>
+      <y>1140</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2112</x>
+      <y>1140</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1938</x>
+      <y>1140</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1704</x>
+      <y>1140</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1488</x>
+      <y>1140</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>1140</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1848</x>
+      <y>1140</y>
+      <w>18</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;460.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2052</x>
+      <y>732</y>
+      <w>1866</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;3090.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2052</x>
+      <y>738</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2400</x>
+      <y>738</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2676</x>
+      <y>738</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2916</x>
+      <y>738</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3114</x>
+      <y>738</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3354</x>
+      <y>738</y>
+      <w>18</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2694</x>
+      <y>654</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2226</x>
+      <y>684</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2100</x>
+      <y>918</y>
+      <w>1050</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;580.0;10.0;670.0;1730.0;670.0;1730.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1782</x>
+      <y>918</y>
+      <w>882</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;410.0;10.0;330.0;1450.0;330.0;1450.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1548</x>
+      <y>918</y>
+      <w>876</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;410.0;10.0;320.0;1440.0;320.0;1440.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1338</x>
+      <y>918</y>
+      <w>792</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;410.0;10.0;310.0;1300.0;310.0;1300.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2322</x>
+      <y>918</y>
+      <w>1050</w>
+      <h>354</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;530.0;10.0;570.0;1730.0;570.0;1730.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1980</x>
+      <y>918</y>
+      <w>942</w>
+      <h>444</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;670.0;10.0;720.0;1550.0;720.0;1550.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>732</y>
+      <w>1716</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;2840.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1344</x>
+      <y>684</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1698</x>
+      <y>738</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1434</x>
+      <y>738</y>
+      <w>18</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1230</x>
+      <y>738</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>738</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>738</y>
+      <w>18</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>738</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1230</x>
+      <y>918</y>
+      <w>750</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>1230.0;410.0;1230.0;200.0;10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1422</x>
+      <y>918</y>
+      <w>666</w>
+      <h>258</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>1090.0;410.0;1090.0;190.0;10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1650</x>
+      <y>918</y>
+      <w>648</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>1060.0;420.0;1060.0;180.0;10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>918</y>
+      <w>714</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>1170.0;570.0;1170.0;610.0;10.0;610.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>762</x>
+      <y>918</y>
+      <w>732</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;630.0;1200.0;630.0;1200.0;570.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>918</y>
+      <w>756</w>
+      <h>462</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;750.0;1240.0;750.0;1240.0;610.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>678</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>678</y>
+      <w>18</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>780</y>
+      <w>102</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>786</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>786</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3606</x>
+      <y>828</y>
+      <w>18</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3588</x>
+      <y>822</y>
+      <w>36</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3588</x>
+      <y>960</y>
+      <w>36</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3312</x>
+      <y>654</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3900</x>
+      <y>738</y>
+      <w>18</w>
+      <h>588</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;960.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3084</x>
+      <y>654</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2874</x>
+      <y>654</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>672</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>672</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>672</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>66</x>
+      <y>672</y>
+      <w>18</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3570</x>
+      <y>654</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3936</x>
+      <y>894</y>
+      <w>18</w>
+      <h>432</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;700.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3936</x>
+      <y>888</y>
+      <w>54</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3936</x>
+      <y>978</y>
+      <w>54</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3936</x>
+      <y>1056</y>
+      <w>54</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3936</x>
+      <y>1146</y>
+      <w>54</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3936</x>
+      <y>1224</y>
+      <w>54</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1908</x>
+      <y>1350</y>
+      <w>2070</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>3430.0;10.0;3430.0;160.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>738</y>
+      <w>54</w>
+      <h>612</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;1000.0;70.0;1000.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>114</x>
+      <y>882</y>
+      <w>18</w>
+      <h>444</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;720.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>114</x>
+      <y>876</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>114</x>
+      <y>978</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>114</x>
+      <y>1062</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>114</x>
+      <y>1146</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>114</x>
+      <y>1224</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>1350</y>
+      <w>1698</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;2810.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3618</x>
+      <y>654</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3378</x>
+      <y>654</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2934</x>
+      <y>654</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3126</x>
+      <y>654</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3846</x>
+      <y>1146</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3846</x>
+      <y>912</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3588</x>
+      <y>1032</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3588</x>
+      <y>1122</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3588</x>
+      <y>1038</y>
+      <w>18</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;680.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1956</x>
+      <y>636</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>102</x>
+      <y>708</y>
+      <w>3534</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;5870.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>702</x>
+      <y>672</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>672</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>672</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>102</x>
+      <y>672</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1566</x>
+      <y>438</y>
+      <w>102</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>*Timer*
+--
+cd. Game class diagram</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1662</x>
+      <y>450</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>875</x>
+      <y>80</y>
+      <w>205</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>*CommandExecutor*
+--
+
+--
+_+ execute(connection: Connection*,command: Command*): void	_
+--
+Executes the command sent 
+from the client
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>165</y>
+      <w>615</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*CommandFactory*
+--
+--
+_+ serialize(command: Command*, buffer: char): void_
+_+ deserialize(buffer: char): Command*_
+_+ ping(): Command*_
+_+ updateEntityPosition(id: unsigned long,position: Vector2D): Command*_
+_+ createAccount(username: char,password: char,secret_question: char,secret_answer: char): Command*_
+_+ authLogin(username: char, password: char): Command*_
+_+ authLogout(username: char): Command*_
+_+ authRestore(state: AuthRestore::State, username: char,password: char,secret_question: char,secret_answer: char): Command*_
+_+ sendError(error: char): Command*_
+_+ gameStatus(state: GameStatus::State,settings: GameSettings,username_player1: char,username_player2: char,score_player1: int,score_player2: int,level_remain: int): Command*_
+_+ userFriendList(username: char): Command*_
+_+ userData(username: char): Command*_
+_+ friendRequest(state: FriendRequest::State,from_username: char,to_username: char): Command*_
+_+ friendProfileInfo(from_username: char,to_username: char): Command*_
+_+ leaderboard(): Command*_
+_+ updateHUD(username_player1: char,username_player2: char,player1_hp: int,player1_score: int,player2_hp: int,player2_score: int,boss_hp: int,player_max_hp: int,boss_max_hp: int): Command*_
+_+ createEntity(type: EntityType, id: unsigned long,position: Vector2D,is_hostile: boolean): Command*_
+_+ destroyEntity(id: unsigned long): Command*_
+_+ input(inputs: char): Command*_
+_+ createLevel(username_creator: char,name_level: char,level: char,check_name: boolean):Command*_
+_+ userLevelList(username_creator: char): Command*_
+_+ likeLevel(username_liker: char,name_level: char): Command*_
+_+ isLiked(username_like: char,name_level: char): Command*_
+_+ playSound(sound: SoundEffect,level_number: unsigned): Command*_
+_+ makeParticle(type: Particle,x: float,y:float,w: float,h:float,is_hostile: boolean): Command*_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1075</x>
+      <y>95</y>
+      <w>75</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+executes v
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0;130.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>610</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*CreateAccount*
+--
+state: State
+username: char[ ]
+password: char[ ]
+secret_question: char[ ]
+secret_answer: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>550</y>
+      <w>100</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*Leaderboard*
+--
+state: State
+top_player_count: unsigned
+username_list: char[ ]
+xps: int[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>775</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*FriendRequest*
+--
+state: State
+from_username: char[ ]
+to_username: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>495</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*AuthLogin*
+--
+state: State
+username: char[ ]
+password: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>495</y>
+      <w>100</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*AuthRestore*
+--
+state: State
+username: char[ ]
+secret_question: char[ ]
+secret_answer: char[ ]
+new_password: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>610</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*GameStatus*
+--
+state: State
+settings: GameSettings
+username_player1: char[ ]
+username_player2: char[ ]
+level_remain: int
+score_player1: int
+score_player2: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>700</y>
+      <w>100</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*UserFriendList*
+--
+state: State
+username: char[ ]
+friends_count: unsigned
+friend_list: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>685</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*UpdateEntityPosition*
+--
+id: unsigned long
+position: Vector2D</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>760</y>
+      <w>100</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*DestroyEntity*
+--
+id: unsigned long</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>905</y>
+      <w>100</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*Input*
+--
+chars: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>730</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*Ping*
+--
+chrono: StopWatch</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>830</y>
+      <w>100</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*UpdateHUD*
+--
+username_player1: char[ ]
+username_player2: char[ ]
+player1_hp: int
+player1_score: int
+player2_hp: int
+player2_score: int
+boss_hp: int
+player_max_hp: int
+boss_max_hp: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>950</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*CreateEntity*
+--
+type: EntityType
+id: unsigned long
+position: Vector2D
+is_hostile: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1075</x>
+      <y>420</y>
+      <w>105</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*Command*
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>800</y>
+      <w>145</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*UserData*
+--
+state: State
+id: int
+xp: int
+username: char[ ]
+password: char[ ]
+secret_question: char[ ]
+secret_answer: char[ ]
+friend_list: int[ ]
+pending_friend_requests: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1095</x>
+      <y>1350</y>
+      <w>145</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Union&gt;&gt;
+*Data*
+--
+ping: Ping
+input: Input
+update_entity_position: UpdateEntityPosition
+create_entity: CreateEntiy
+destroy_entity: DestroyEntity
+create_account: CreateAccount
+auth_login: AuthLogin
+auth_logout: AuthLogout
+auth_restore: AuthRestore      
+send_erroe: SendError 
+user_data: UserData       
+user_friendlist: UserFriendList 
+friend_profile: FriendProfileInfo
+leaderboard: Leaderboard     
+game_status: GameStatus           
+friend_request: FriendRequest
+update_hud: UpdateHUD   
+create_level: CreateLevel
+user_level_list: UserLevelList
+like_level: likeLevel
+is_liked: IsLiked
+play_sound: PlaySound
+particle: Particle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1345</x>
+      <y>700</y>
+      <w>85</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+Request
+Completed
+NotFound</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>1170</y>
+      <w>100</w>
+      <h>215</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*Type*
+--
+Undefined
+Ping
+Input
+UpdateEntityPosition
+CreateEntity
+DestroyEntity
+CreateAccount
+AuthLogin
+AuthLogout
+AuthRestore
+SendError
+UserData
+UserFriendList
+FriendProfileInfo
+Leaderboard
+GameStatus
+FriendRequest
+UpdateHUD
+CreateLevel
+LikeLevel
+UserLevelList
+IsLiked
+PlaySound
+Particle</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>550</y>
+      <w>70</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+Request
+Success
+Failed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1345</x>
+      <y>490</y>
+      <w>85</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+RequestSecretQuestion
+ResponseSecretQuestion
+CheckSecretAnswer
+SecretAnswerAccepted
+SecretAnswerDenied
+NewPassword</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1390</x>
+      <y>815</y>
+      <w>85</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+Request
+Completed
+NotFound</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>495</y>
+      <w>70</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+Undefined
+Accepted
+Denied</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>610</y>
+      <w>70</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+Request
+Success
+Failed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1345</x>
+      <y>605</y>
+      <w>85</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+Starts
+ClientInitialized
+Ends
+Quit
+Pause
+Resume</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>775</y>
+      <w>70</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+Pending
+Accepted
+Denied
+Delete</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>480</y>
+      <w>15</w>
+      <h>880</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;1740.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>515</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>570</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>640</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>700</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>745</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>790</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>860</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>515</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>640</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>720</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>765</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>920</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>975</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>835</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>1210</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>905</x>
+      <y>630</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt; has</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>905</x>
+      <y>565</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt; has</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>905</x>
+      <y>510</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt; has</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>905</x>
+      <y>790</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt; has</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1345</x>
+      <y>835</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+ has &gt;</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1300</x>
+      <y>715</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+ has &gt;</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1300</x>
+      <y>630</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+ has &gt;</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1300</x>
+      <y>520</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+ has &gt;</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>380</y>
+      <w>15</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>1020</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*FriendProfileInfo*
+--
+from_username: char[ ]
+to_username: char[ ]
+state: State
+score: int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1040</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1300</x>
+      <y>1035</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+ has &gt;</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1345</x>
+      <y>1025</y>
+      <w>85</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+FRIEND
+NOT_FRIEND
+PENDING</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>565</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*SendError*
+--
+error: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>570</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>1085</y>
+      <w>100</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*AuthLogout*
+--
+username: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1105</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>1140</y>
+      <w>100</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*CreateLevel*
+--
+state: State
+username_creator: char[]
+name_level: char[]
+level: char[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1300</x>
+      <y>1150</y>
+      <w>55</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+ has &gt;</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1345</x>
+      <y>1140</y>
+      <w>85</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+Created
+Error
+Check
+Doublon
+Name_ok</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1160</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>945</y>
+      <w>100</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*UserLevelList*
+--
+username_creator: char[]
+nb_level: unsigned
+level_list: char[ ]
+level_like: int[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>1010</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*LikeLevel*
+--
+username_liker: char[ ]
+level_name: char[ ]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>1060</y>
+      <w>100</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*IsLiked*
+--
+username_liker: char[ ]
+level_name: char[ ]
+liked: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>1115</y>
+      <w>100</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*PlaySound *
+--
+sound: SoundEffect
+level_number: unsigned</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>975</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>1025</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>1080</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>1130</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1205</x>
+      <y>1210</y>
+      <w>100</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*Particle *
+--
+type: Particle 
+x: float
+y: float
+w: float
+h: float
+reverse: boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>1230</y>
+      <w>95</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>90</y>
+      <w>75</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+         calls &gt;</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

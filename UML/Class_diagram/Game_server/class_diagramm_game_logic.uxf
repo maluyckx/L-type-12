@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1060</x>
+      <y>275</y>
+      <w>275</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>*HUD*
+--
+- _username_player1: char[ ]
+- _username_player2: char[ ]
+- _players1_hp: int
+- _players2_hp: int
+- _boss_hp: int
+- _boss_hp_max: int
+- _player_hp_max: int
+- _player1_score: int
+- _player2_score: int
+- _isPaused: boolean
+- _player_hp: SpriteSimple
+- _hp_boss: SpriteSimple
+- _boss_bar: SpriteSimple
+- _player2_bar: SpriteSimple
+- _text: Texte
+--
+- drawLife(player: int,life: int,life_max:int,window: RenderWindow*): void
+- drawLifeBoss(life: int,life_max:int,window: RenderWindow*): void
+- drawScore(player: int,score:int,window: RenderWindow*): void
++ updateContent( _username_player1: char,
+_username_player2: char,_players1_hp: int,_players2_hp: int,_boss_hp: int,
+_player1_score: int,_player2_score: int,_player_hp_max: int,_boss_hp_max: int): void
++ displayPause(window: RenderWindow*): void
++ setIsPaused(isPaused: boolean): void
++ setMaxLifePlayer(life_max: int): void
++ getUsernamePlayer1(): char
++ getUsernamePlayer2(): char
++ getBossHp(): int
++ getBossHpMax(): int
++ getPlayer1Hp(): int
++ getPlayer2Hp(): int
++ getPlayer1Score(): int
++ getPlayer2Score(): int
++ getPlayerHpMax() : int
++ setBossMaxHp(max_hp: int): void
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ onCollision(other: GameEntity*, GameInstance*): void &lt;&lt;override&gt;&gt;
++ isDestroyed(): boolean &lt;&lt;override&gt;&gt;
++ destroy(): void &lt;&lt;override&gt;&gt;
++ draw(RenderWindow*): void &lt;&lt;override&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1170</x>
+      <y>820</y>
+      <w>220</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>*Lootable*
+--
+- _type: EntityType
+- is_garanteed: boolean
+--
++ getType(): EntityType
++ setType(t: EntityType): void 
++ spawnBonus(instance: GameInstance*,position: Vector2D): void
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>700</y>
+      <w>175</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/Ship/*
+--
+# _projectile: ProjectileType
+# _is_hostile: boolean
+# _shoot_cooldown: Timer
+--
++ getProjectile(): ProjectileType
++ setProjectile(projectile: ProjectileType): void
++ shoot(instance: GameInstance*): void
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ isHostile(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>495</y>
+      <w>125</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/Destructable/*
+--
+- _hp: int
+- _destroyed: boolean
+--
++ isAlive(): boolean
++ getHp(): int
++ setHP(hp: int): void
++ lostHp(hp: int): void
++ isDestroyed(): boolean &lt;&lt;override&gt;&gt;
++ destroy(): void &lt;&lt;override&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>470</y>
+      <w>240</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>*Projectile*
+--
+- _dmg: int
+- _is_hostile: bool
+- _attack_speed: double
+- _destroyed: boolean
+- _shooter: PlayerShip*
+--
++ setProjectile(type: ProjectileType): void
+_+ toEntityType(type: ProjectileType): EntityType_
+_+ toProjectileType(type: EntityType): ProjectileType_
++ getProjectileType(): ProjectileType
+_+ getDamage(type: ProjectileType): int_
+_+ getDimensions(type: ProjectileType): Vector2D_
+_+ getAttackSpeed(type: ProjectileType): double_
+_+ getMovementSpeed(type: ProjectileType): Vector2D_
+_+ getAppearance(type: ProjectileType): string_
+_+ getPath(type: ProjectileType,is_hostile: boolean): string_
++ draw(RenderWindow*): void &lt;&lt;override&gt;&gt;
++ onCollision(other: GameEntity*,instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ isDestroyed(): boolean 
++ destroy(): void 
++ isHostile(): boolean
++ getShooter(): PlayerShip*
++ deleteShooter(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>680</y>
+      <w>245</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>*Bonus*
+--
+- _destroyed: boolean
+- proj_type: ProjectileType
+--
++ draw(RenderWindow*): void &lt;&lt;override&gt;&gt;
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ onCollision(other: GameEntity*,instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ getProjectileBonus(): ProjectileType
++ isDestroyed(): boolean &lt;&lt;override&gt;&gt;
++ destroy(): void &lt;&lt;override&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>805</x>
+      <y>625</y>
+      <w>90</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
+m1=*
+m2=1
+
+
+
+
+                        shoots ^</panel_attributes>
+    <additional_attributes>70.0;20.0;100.0;20.0;100.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>845</y>
+      <w>100</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+Loots &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>695</y>
+      <w>50</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+Loots v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0;80.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1265</x>
+      <y>765</y>
+      <w>40</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+Loots v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>760</y>
+      <w>45</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt; has
+m1=1
+m2=0..1</panel_attributes>
+    <additional_attributes>70.0;190.0;10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>700</y>
+      <w>60</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*/ProjectileType/*
+--
+Small
+Normal
+Big
+Laser
+Missile  
+Fire</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>980</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>*BattleShip *
+--
+--
++ movePattern(): void &lt;&lt;override&gt;&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>695</y>
+      <w>15</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;660.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>895</y>
+      <w>15</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1120</x>
+      <y>980</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>*Cruiser*
+--
+--
++ movePattern(): void &lt;&lt;override&gt;&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>815</x>
+      <y>980</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>*LaserGun*
+--
+--
++ movePattern(): void &lt;&lt;override&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>980</y>
+      <w>130</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>*Swarmling*
+--
+--
++ movePattern(): void &lt;&lt;override&gt;&gt;
++ shoot(instance: GameInstance*): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>955</y>
+      <w>580</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;1140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1180</x>
+      <y>955</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>885</x>
+      <y>955</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>955</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>505</x>
+      <y>460</y>
+      <w>565</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;1110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>460</y>
+      <w>15</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>505</x>
+      <y>460</y>
+      <w>15</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;20.0;10.0;10.0;10.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>935</x>
+      <y>460</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>585</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>885</x>
+      <y>625</y>
+      <w>420</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>820.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>885</x>
+      <y>625</y>
+      <w>15</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>625</y>
+      <w>15</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1290</x>
+      <y>625</y>
+      <w>15</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>515</x>
+      <y>805</y>
+      <w>300</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>*PlayerShip*
+--
+- _score: int
+- _life: int
+--
+# onDeath(instance: GameInstance*)
++ getScore(): int
++ getLife(): int
++ setScore(s: int): void
++ setLife(l: int): void
++ nuke(instance: GameState*): void
++ lostLife(l: int): void
++ moveToCenter(): void
++ draw(RenderWindow*): void &lt;&lt;override&gt;&gt;
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ onCollision(other: GameEntity*,instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ shoot(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
+_+ increaseScore(instance: GameInstance*,shooter: PlayerShip*,score_multiplier: double): void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>830</x>
+      <y>810</y>
+      <w>255</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+/*EnemyShip*/
+--
+- _collided_with_hud: boolean
+# _loot: Lootable
+# _move_pattern_location: unsigned long
+# _movement_time: Timer
+--
++ movePattern(): void
++ draw(RenderWindow*): void &lt;&lt;override&gt;&gt;
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ onCollision(other: GameEntity*,instance: GameInstance*): void &lt;&lt;override&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1015</x>
+      <y>955</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>485</y>
+      <w>685</w>
+      <h>445</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= 1
+m2=1..2
+display life of v
+
+
+
+
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes>1050.0;10.0;1250.0;10.0;1250.0;860.0;10.0;860.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>640</y>
+      <w>245</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+*/Boss/*
+--
+- _loot: Lootable
+--
++ draw(RenderWindow*): void  &lt;&lt;override&gt;&gt;
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ onCollision(other: GameEntity*,instance: GameInstance*): void &lt;&lt;override&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1180</x>
+      <y>710</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Obstacle*
+--
+- _loot: Lootable
+- _collided_with_hud: boolean
+--
++ draw(RenderWindow*): void &lt;&lt;override&gt;&gt;
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ onCollision(other: GameEntity*,instance: GameInstance*): void &lt;&lt;override&gt;&gt; </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>725</y>
+      <w>50</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+gives &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1220</x>
+      <y>670</y>
+      <w>225</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;430.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>625</x>
+      <y>1045</y>
+      <w>180</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*AsteroidBase*
+--
+-_is_spawning: boolean
+-_spwan_pos: int
+-_cooldown: Timer 
+--
++ spawn(instance: GameInstance*): void
++ draw(RenderWindow*): void &lt;&lt;override&gt;&gt;
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ lostHp(hp: int): void &lt;&lt;override&gt;&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>1045</y>
+      <w>230</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*BossPoulpe*
+--
+-_shoot_cooldown: Timer 
+-_cooldown_spray: Timer 
+-_shoot_left:  boolean
+--
++ shoot(instance: GameInstance*,type: ProjectileType,offset: int): void
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1050</x>
+      <y>1045</y>
+      <w>180</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*Enterprise *
+--
+- _warp_cooldown: Timer 
+- _shoot_cooldown: Timer 
+- _spray_number:  unsigned int
+- _projectile: ProjectileType
+- _cooldown_spray: Timer
+--
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ shoot(instance: GameInstance*): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1255</x>
+      <y>980</y>
+      <w>165</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>*Escorter*
+--
+--
++ movePattern(): void &lt;&lt;override&gt;&gt;
++ shoot(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1315</x>
+      <y>955</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1235</x>
+      <y>1045</y>
+      <w>210</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*Dragon *
+--
+- _fire_timer: Timer 
+- _animation_timer: Timer*
+--
++ fireAnimation(): void
++ onUpdate(instance: GameInstance*): void &lt;&lt;override&gt;&gt;
++ onCollision(other: GameEntity*,instance: GameInstance*): void
++ shoot(instance: GameInstance*): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>1165</y>
+      <w>180</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>*Timer   *
+--
+- _period_sec: double   
+- _last_time: timespec 
+--
++ isTriggered(reset: boolean): boolean
++ isTriggered(seconds: double,reset: boolean): boolean
++ reset(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1370</x>
+      <y>300</y>
+      <w>85</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>*SpriteSimple*
+--
+--
+--
+see class Diagram Menu
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>320</y>
+      <w>50</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>760</y>
+      <w>85</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>*Timer   *
+--
+--
+--
+see game class diagram
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>970</x>
+      <y>735</y>
+      <w>40</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>60.0;90.0;50.0;90.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>780</y>
+      <w>30</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>1140</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>1135</y>
+      <w>680</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1340.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1365</x>
+      <y>1115</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1140</x>
+      <y>1115</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>900</x>
+      <y>1115</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>1115</y>
+      <w>15</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>705</x>
+      <y>1015</y>
+      <w>660</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;1300.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1350</x>
+      <y>1020</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1135</x>
+      <y>1020</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>915</x>
+      <y>1020</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>705</x>
+      <y>1020</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>885</x>
+      <y>785</y>
+      <w>15</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>790</y>
+      <w>275</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;530.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>935</x>
+      <y>795</y>
+      <w>15</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>675</x>
+      <y>795</y>
+      <w>15</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1370</x>
+      <y>370</y>
+      <w>85</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>*Texte*
+--
+--
+--
+see class Diagram Menu
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>390</y>
+      <w>50</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>765</x>
+      <y>730</y>
+      <w>45</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt; has</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>915</x>
+      <y>390</y>
+      <w>45</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+creates v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1210</x>
+      <y>240</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1415</x>
+      <y>350</y>
+      <w>85</w>
+      <h>405</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;790.0;10.0;790.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1385</x>
+      <y>330</y>
+      <w>135</w>
+      <h>535</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;1050.0;250.0;1050.0;250.0;10.0</additional_attributes>
+  </element>
+</diagram>

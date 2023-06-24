@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="l_type_groupe_12_2020"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/edo/Documents/hey/projet/l-type-groupe-12-2020"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/edo/Documents/hey/projet/l-type-groupe-12-2020"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/edo/Documents/hey/projet/l-type-groupe-12-2020"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="l_type_groupe_12_2020">
+				<Option output="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/ltype_game_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/edo/Documents/hey/projet/l-type-groupe-12-2020"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 l_type_groupe_12_2020"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="l_type_groupe_12_2020/fast">
+				<Option output="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/ltype_game_client" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/edo/Documents/hey/projet/l-type-groupe-12-2020"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 l_type_groupe_12_2020/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/edo/Documents/hey/projet/l-type-groupe-12-2020/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Database/Database.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Database/Database.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Database/FriendRequest.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Database/User.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Database/User.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/AppInstance.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/Boss.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/Boss.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/Destructable.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/EnemyShip.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/EnemyShip.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/EntityType.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/GameEntity.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/GameEntity.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/Ship.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Abstract/Ship.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Application.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Application.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Bonus.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Bonus.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Drawable.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Drawable.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/GameClient.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/GameClient.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/GameplayWindow.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/GameplayWindow.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Ncurses/Background.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Ncurses/Background.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Ncurses/TerminalWindow.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Ncurses/TerminalWindow.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/SFML/GraphicalWindow.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/SFML/GraphicalWindow.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/SFML/ParticleHandler.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/SFML/ParticleHandler.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Sound.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Sound.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Window.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Client/Window.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Command.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Command.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Connection.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Connection.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/AsteroidBase.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/AsteroidBase.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/BattleShip.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/BattleShip.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/BossPoulpe.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/BossPoulpe.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Cruiser.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Cruiser.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Dragon.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Dragon.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Enterprise.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Enterprise.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Escorter.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Escorter.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/LaserGun.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/LaserGun.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Obstacle.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Obstacle.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Swarmling.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/EnemyType/Swarmling.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/GameSettings.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/GameSettings.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/GameState.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/GameState.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/HUD.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/HUD.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Input.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Input.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Lootable.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Lootable.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/PlayerShip.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/PlayerShip.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Projectile.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Projectile.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/CollisionResolver.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/CollisionResolver.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/GameInstance.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/GameInstance.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/GameServer.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/GameServer.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/GameSession.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/GameSession.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/Level.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/Level.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/Spawner.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Server/Spawner.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Vector2D.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Vector2DServer.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Game/Vector2DServer.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/BaseMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/BaseMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/BaseMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/BaseMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/BaseMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/BaseMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/MenuInfo.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/MenuInfo.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/ConnectionInfo.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/ConnectionInfo.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/ConnectionInfoNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/ConnectionInfoNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/ConnectionMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/ConnectionMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/LoginMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/LoginMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/NewPasswordMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/NewPasswordMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/QuestionVerificationMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/QuestionVerificationMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/RegisterMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/RegisterMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/UserNameVerificationMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/Ncurses/UserNameVerificationMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/ConnectionInfoSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/ConnectionInfoSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/ConnectionMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/ConnectionMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/LoginMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/LoginMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/NewPasswordMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/NewPasswordMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/QuestionVerificationMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/QuestionVerificationMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/RegisterMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/RegisterMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/UserNameVerificationMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/ConnectionMenu/SFML/UserNameVerificationMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/EndMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/EndMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/FriendProfileMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/FriendProfileMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/LeaderboardMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/LeaderboardMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/LevelMenu/LevelChoiceSettingsMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/LevelMenu/LevelChoiceSettingsMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/LevelMenu/LevelCreateMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/LevelMenu/LevelCreateMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/LevelMenu/LevelMainMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/LevelMenu/LevelMainMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/MyProfileMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/MyProfileMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/EndMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/EndMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/ErrorMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/ErrorMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/FriendProfileMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/FriendProfileMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/LeaderboardMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/LeaderboardMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/LevelFriendMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/LevelFriendMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/MainMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/MainMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/MyProfileMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/MyProfileMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/ProfileMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/ProfileMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/RoomMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/RoomMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/SocialMenuNcurses.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/Ncurses/SocialMenuNcurses.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/RoomMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/RoomMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/EndMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/EndMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/ErrorMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/ErrorMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/FriendProfileMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/FriendProfileMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/LeaderboardMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/LeaderboardMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/LevelFriendMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/LevelFriendMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/MainMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/MainMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/MyProfileMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/MyProfileMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/RoomMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/RoomMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/SocialMenuSFML.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SFML/SocialMenuSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SocialMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/SubMenus/SocialMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Border.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Border.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Button.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Button.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/MenuMaker.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/MenuMaker.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/PosObj.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/PosObj.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Rectangle.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/TextInput.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/TextInput.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Win.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Win.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Window.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window/Window.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/WindowMenu.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/WindowMenu.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/Background.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/Background.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/Button.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/Button.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/SpriteSimple.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/SpriteSimple.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/Stars.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/Stars.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/Texte.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/Texte.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/TexteField.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Menu/Window_SFML/TexteField.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Utils/ColorsSFML.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Utils/Constants.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Utils/DebugLogger.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Utils/ThreadSafeQueue.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Utils/Time.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/Utils/Time.hpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/src/main.cpp">
+			<Option target="l_type_groupe_12_2020"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/../../../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/../../../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/../../../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/../../../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/home/edo/Documents/hey/projet/l-type-groupe-12-2020/../../../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

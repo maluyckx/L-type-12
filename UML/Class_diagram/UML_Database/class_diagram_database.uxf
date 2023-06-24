@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>680</y>
+      <w>600</w>
+      <h>650</h>
+    </coordinates>
+    <panel_attributes>*Database*
+--
+- _db: sqlite3
+- _mutex: pthread_mutex_t
+--
++ lock(): void
++ unlock(): void
++ load(path: char): void
++ save(): void
++ getLastId(): int
++ getUser(id: int): User
++ getUser(pseudo: string): User
++ getId(pseudo: string): int
++ getPasswd(pseudo: string): string
++ getSecretQuestion(pseudo: string): string
++ getSecretAnswer(pseudo: string): string
++ getXp(pseudo: string): int
++ addFriendRequest(from: string,to: string): void
++ acceptFriendRequest(from: string,to: string): void
++ refuseFriendRequest(from: string, to: string): void
++ getPendingRequest(from: string): string[ ]
++ deleteFriend(me: string,enemy: string): void
++ getStateFriendRequest(from: string,to: string): State
++ testSecretQuestion(pseudo: string, answer: string): boolean
++ getFriendList(pseudo: string): string[ ]
++ getLeaderboard(): leaderboard[ ]
++ updateXp(pseudo: string, xp: int): void
++ logIn(pseudo: string,passwd: string): boolean
++ signIn(pseudo: string,passwd: string,secret_question: string, secret_answer: string): boolean
++ changePasswd(pseudo: string, new_passwd: string): void
++ newLevel(name: string,pseudo: string): boolean
++ updateLikes(level: string): void
++ removeLikes(level: string): void
++ showLevels(pseudo: string): levels[ ]
++ getLikes(level: string): int
++ isLevelNameAlreadyTaken(level: string): boolean
++ getIdLevel(name_level: string): int
++ likedBy(name_level: string,name_user: string): boolean
++ newLike(name_level: string,name_user: string): void
++ deleteLike(name_level: string,name_user: string): void
++ execute(string): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>340</y>
+      <w>270</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>*FriendRequest*
+--
+- _id_sender: int
+- _id_receiver: int
+- _state: State
+--
++ setState(s: bool): void
++ stateIsUndefined(): boolean
++ getIdSender(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>210</y>
+      <w>380</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>*User*
+--
+- _id: int
+- _xp: int
+- _pseudo: string
+- _password: string
+- _secret_question: string
+- _secret_answer: string
+- _friend_list: int[ ]
+- _friend_request_list: FriendRequest[ ]
+--
++ getId(): int
++ getPseudo(): string
++ getPassword(): string
++ getFriendList(): int[ ]
++ getXp(): int
++ getSecretQuestion(): string
++ getSecretAnswer(): string
++ sendFriendRequest(int): FriendRequest 
++ sendFriendRequest(User&amp;): FriendRequest 
++ acceptFriendRequest(FriendRequest&amp;): void 
++ refuseFriendRequest(FriendRequest&amp;): void 
++ removeFriend(User&amp;): bool  </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>830</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+ACCEPT
+REFUSE
+UNDEFINED
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>960</y>
+      <w>160</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*leaderboard*
+--
+_pseudo: string
+_xp: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>990</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>880</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>260</y>
+      <w>360</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>340.0;80.0;340.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>570</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+contains ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>490</y>
+      <w>80</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+has a v</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>600</y>
+      <w>160</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+*State*
+--
+ACCEPT
+REFUSE
+UNDEFINED
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>1080</y>
+      <w>160</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Structure&gt;&gt;
+*levels*
+--
+_creator: string
+_likes: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>1110</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
